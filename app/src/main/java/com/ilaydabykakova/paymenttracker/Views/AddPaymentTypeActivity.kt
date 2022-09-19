@@ -127,13 +127,12 @@ class AddPaymentTypeActivity : AppCompatActivity() {
             }else{
                 if(periodControl(pyPeriod,pyPeriodDay)){
                     dbOperation.updatePaymentType(bringPy.id, PaymentType(pyTitle,pyPeriod,pyPeriodDay))
-                    Toast.makeText(this, "Başarılı şekilde yeni ödeme tipi güncelelndi.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Başarılı şekilde yeni ödeme tipi güncelelndi.", Toast.LENGTH_SHORT).show()
                     val pyListIntents = Intent(this, MainActivity::class.java)
                     startActivity(pyListIntents)
                 }else {
                     Toast.makeText(
-                        this, "Yanlış veri giridiniz !", Toast.LENGTH_SHORT
-                    ).show()
+                        this, "Yanlış veri giridiniz !", Toast.LENGTH_SHORT).show()
                 }
             }
         } else {

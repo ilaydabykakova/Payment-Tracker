@@ -35,11 +35,8 @@ class AddPaymentActivity : AppCompatActivity() {
 
     private fun initializeEvents() {
         val today = Calendar.getInstance()
-        binding.pyDate.init(
-            today.get(Calendar.YEAR),
-            today.get(Calendar.MONTH),
-            today.get(Calendar.DAY_OF_MONTH)
-        ) { view, year, month, day ->
+        binding.pyDate.init( today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH) )
+        { view, year, month, day ->
             binding.pyTopicDate.text = "${"Seçilen gün: "} ${getDateText()}"
         }
         binding.btnSavePy.setOnClickListener {
@@ -74,24 +71,6 @@ class AddPaymentActivity : AppCompatActivity() {
         }
 
         return returnString
-
-
-        /*
-        if (pyDay in 1..9)
-            returnString = returnString + "0" + pyDay.toString() + "."
-        else
-            returnString = "$returnString$pyDay."
-
-        val pyMonth: Int = binding.pyDate.month
-        if (pyMonth in 1..9)
-            returnString = returnString + pyMonth.toString() + "."
-        else
-            returnString = returnString + pyDay.toString() + "."
-
-        returnString += binding.pyDate.year
-
-        return returnString
-         */
     }
 
 

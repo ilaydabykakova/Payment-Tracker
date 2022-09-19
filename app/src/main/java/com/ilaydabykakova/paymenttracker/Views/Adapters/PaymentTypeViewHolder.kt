@@ -29,6 +29,6 @@ class PaymentTypeViewHolder(private val context: Context, private val binding: R
                 }
             }
         }
-        binding.txtTypePeriodDay.text = "İlk eklenen "+paymentType.periodDay.toInt().toString() + ". gün."
+        binding.txtTypePeriodDay.text = paymentType.periodDay.toInt().toString() + ".gün ekleme yaptınız."
     }
 }
