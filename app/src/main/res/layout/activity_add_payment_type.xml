@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.AddPaymentTypeActivity">
+
+    <Button
+        android:id="@+id/btnSaveType"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="Kaydet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnRemoveType"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="#9C27B0"
+        android:text="Sil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285">
+
+        <EditText
+            android:id="@+id/txtTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="35dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_700"
+            android:hint="Başlığınızı giriniz..."
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spnPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="35dp"
+            android:layout_weight="3"
+            android:backgroundTint="@color/teal_700"
+            android:dropDownWidth="match_parent"
+            android:text="Zamanınızı Seçiniz..."
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/txtPeriodDay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_700"
+            android:hint="Günü giriniz..."
+            android:importantForAutofill="no"
+            android:inputType="number"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
