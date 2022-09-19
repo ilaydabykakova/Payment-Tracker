@@ -1,5 +1,5 @@
 # Payment-Tracker
-## İlayda Büyükakva - 1705001
+## İlayda Büyükakova - 1705001
 - SQLite (Update Data, Add Data, Delete Data, Get Data)
 - ViewBinding
 - DatePicker
